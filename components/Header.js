@@ -20,7 +20,7 @@ function Header(){
   return (
     <div className="flex items-center sticky top-0 z-50 bg-white p-2 lg:px-5 shadow-md">
       <div className="flex items-center">
-        <img 
+        <Image
          src='https://links.papareact.com/5me'
          width={40}
          height={40}
@@ -46,7 +46,7 @@ function Header(){
       </div>
 
       <div className="flex items-center sm:space-x-2 justify-end">
-        <img 
+        <Image 
          className="rounded-full cursor-pointer"
          src=""
          width="40"
