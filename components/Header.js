@@ -25,6 +25,7 @@ function Header(){
          width={40}
          height={40}
          layout="fixed"
+         alt="logo"
         />
       </div>
       <div className="flex ml-2 items-center rounded-full bg-gray-100 p-2">
@@ -51,6 +52,7 @@ function Header(){
          src=""
          width="40"
          height="40"
+         alt="avatar"
          layout="fixed"
         />  
            
