@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Header from "../components/Header"
 import Sidebar from "../components/Sidebar"
 import Feed from "../components/Feed"
+import { db } from "../firebase"
 
 export default function Home() {
   return (
@@ -23,4 +24,19 @@ export default function Home() {
   )
 }
 
-
+export async function getServerSideProps(context) {
+  const posts = await db.collection("post").orderBy
+  ("timestamp", "desc").get()
+  
+  const docs = posts.docs.map(post => ({
+    id: post.id,
+    ...post.data(),
+    timestamp: null
+  }))
+  
+  return {
+    props: {
+      posts: docs
+    }
+  }
+}
