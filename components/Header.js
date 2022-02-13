@@ -46,7 +46,7 @@ function Header(){
       </div>
 
       <div className="flex items-center sm:space-x-2 justify-end">
-        <Image 
+        <img
          className="rounded-full cursor-pointer"
          src="https://i.ibb.co/R6Hn8Hp/images.jpg"
          width="40"
