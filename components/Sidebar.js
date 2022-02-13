@@ -15,7 +15,7 @@ function Sidebar() {
   return (
     <div className="p-2 mt-5 max-w-[600px] xl:min-w-[300px]">
       <SidebarRow src="content://com.android.chrome.FileProvider/images/screenshot/1644773798561804242064.png" />
-      <SidebarRow Icon={UserIcon} title="Friends" />
+      <SidebarRow Icon={UsersIcon} title="Friends" />
       <SidebarRow Icon={UserGroupIcon} title="Groups" />
       <SidebarRow Icon={ShoppingBagIcon}  title="Marketplace" />
       <SidebarRow Icon={DesktopComputerIcon} title="Watch" />
