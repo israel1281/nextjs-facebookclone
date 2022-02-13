@@ -103,6 +103,19 @@ function InputBox() {
           <p className="text-xs sm:text-sm
           xl:text-base">Live Video</p>
         </div>  
+
+        <div onClick={() => filepickerRef.current.click()} className="inputIcon">
+          <CameraIcon className="h-7 text-green-500" />
+          <p className="text-xs sm:text-sm
+          xl:text-base">Photo/Video</p>
+          <input ref={filepickerRef} onChange={addImageToPost} type="file" hidden />
+        </div>
+
+        <div className="inputIcon">
+          <EmojiHappyIcon className="h-7 text-yellow-500" />
+          <p className="text-xs sm:text-sm
+           xl:text-base">Feeling/Activity</p>
+        </div>
       </div>
     </div>
   )
