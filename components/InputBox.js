@@ -85,7 +85,7 @@ function InputBox() {
            ref={inputRef}
            placeholder="whats on your mind"
           />  
-          <button className="rounded-full h-7 w-7 bg-blue-200" type="submit" onClick={sendPost}>
+          <button className="rounded-full h-7 w-7 bg-blue-200" onClick={sendPost}>
             Submit  
           </button>
         </form>
