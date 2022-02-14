@@ -10,7 +10,6 @@ function InputBox() {
   const inputRef = useRef(null)
   const filepickerRef = useRef(null)
   const [imageToPost, setImageToPost] = useState(null)
-  const fiepickerRef = useRef(null)
   
   const sendPost = (e) => {
     e.preventDefault()
@@ -19,9 +18,6 @@ function InputBox() {
     
     db.collection('posts').add({
       message: inputRef.current.value,
-      name: session.user.name,
-      email: session.user.email,
-      image: session.user.image,
       timestamp: firebase.firestore.FieldValue.serverTimestamp()
     }).then(doc => {
       if (imageToPost) {
