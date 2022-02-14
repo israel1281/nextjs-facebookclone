@@ -10,6 +10,7 @@ function InputBox() {
   const inputRef = useRef(null)
   const filepickerRef = useRef(null)
   const [imageToPost, setImageToPost] = useState(null)
+  const fiepickerRef = useRef(null)
   
   const sendPost = (e) => {
     e.preventDefault()
@@ -84,7 +85,7 @@ function InputBox() {
            ref={inputRef}
            placeholder="whats on your mind"
           />  
-          <button className="rounded-full h-7 w-7" type="submit" onClick={sendPost}>
+          <button className="rounded-full h-7 w-7 bg-blue-200" type="submit" onClick={sendPost}>
             Submit  
           </button>
         </form>
