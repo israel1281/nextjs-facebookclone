@@ -85,7 +85,7 @@ function InputBox() {
            ref={inputRef}
            placeholder="whats on your mind"
           />  
-          <button hidden onClick={sendPost}>
+          <button hidden type="submit" onClick={sendPost}>
             Submit  
           </button>
         </form>
