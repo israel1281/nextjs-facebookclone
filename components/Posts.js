@@ -36,4 +36,4 @@ function Posts({ posts }) {
   )
 }
 
-export defaults Posts
+export default Posts
