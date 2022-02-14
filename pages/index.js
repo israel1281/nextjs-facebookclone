@@ -5,7 +5,7 @@ import Sidebar from "../components/Sidebar"
 import Feed from "../components/Feed"
 import { db } from "../firebase"
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <div className="h-screen bg-gray-100 overflow-hidden">
       <Head>
@@ -24,19 +24,19 @@ export default function Home() {
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const posts = await db.collection("post").orderBy
   ("timestamp", "desc").get()
   
-  const docs = posts.docs.map(post => ({
+  const docs = posts.docs.map((post) => ({
     id: post.id,
     ...post.data(),
-    timestamp: null
+    timestamp: null,
   }))
   
   return {
     props: {
       posts: docs
-    }
+    },
   }
 }
