@@ -1,4 +1,4 @@
-import { db } from "../firebase
+import { db } from "../firebase"
 import { useCollection } from "react-firebase-hooks/firestore"
 import Post from "./Post"
 
